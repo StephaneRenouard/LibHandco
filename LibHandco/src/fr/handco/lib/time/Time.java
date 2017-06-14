@@ -43,6 +43,39 @@ public class Time {
 		
 	}
 	
+	/**
+	 * Give a time stamp in format 2011.11.29-10:15:23 without space at the end
+	 * 
+	 * @return String timeStamp
+	 */
+	@SuppressWarnings("deprecation")
+	public static String timeStampWithoutSpace(String data) {
+
+		Date dt = new Date();
+		String str = "";
+		String sMonth, sDay, sHour, sMin, sSec;
+
+		sMonth = (dt.getMonth() + 1 < 10 ? "0"
+				+ String.valueOf((dt.getMonth() + 1)) : String.valueOf(dt
+				.getMonth() + 1));
+		sDay = (dt.getDate() < 10 ? "0" + String.valueOf(dt.getDate()) : String
+				.valueOf(dt.getDate()));
+		str += String.valueOf(dt.getYear() + 1900) + "." + sMonth + "." + sDay
+				+ "-";
+		sHour = (dt.getHours() < 10 ? "0" + String.valueOf(dt.getHours())
+				: String.valueOf(dt.getHours()));
+		sMin = (dt.getMinutes() < 10 ? "0" + String.valueOf(dt.getMinutes())
+				: String.valueOf(dt.getMinutes()));
+		sSec = (dt.getSeconds() < 10 ? "0" + String.valueOf(dt.getSeconds())
+				: String.valueOf(dt.getSeconds()));
+
+		str += sHour + ":" + sMin + ":" + sSec + "" + data;
+		
+		
+		return str;
+		
+	}
+	
 	public static String timeStampMillis(String data){
 		
 		long millis = System.currentTimeMillis() % 1000;
