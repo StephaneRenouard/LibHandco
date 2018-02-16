@@ -246,5 +246,76 @@ public class Time {
 			return false;
 		
 	}
+	
+	/**
+	 * return sec from currentTimeMillisec
+	 * @param currentTimeMillisec
+	 * @return long
+	 */
+	public static long get_number_sec_from_currentTimeMillis(long currentTimeMillisec){
+		
+		long time = System.currentTimeMillis();
+		long elapsed_time = time - currentTimeMillisec;
+		elapsed_time = currentTimeMillisec/1000;
+		
+		return elapsed_time;
+	}
+	
+	/**
+	 * return hours from currentTimeMillisec
+	 * @param currentTimeMillisec
+	 * @return int
+	 */
+	public static int get_hour_from_currentTimeMillis(long currentTimeMillisec){
+		
+		long time = System.currentTimeMillis();
+		long elapsed_time = time - currentTimeMillisec;
+		elapsed_time = currentTimeMillisec/1000;
+		
+		long min = elapsed_time/60;
+		int hour = Math.round(min/60);
+		
+		return hour;
+	}
+	
+	/**
+	 * return mins from currentTimeMillisec
+	 * @param currentTimeMillisec
+	 * @return int
+	 */
+	public static int get_min_from_currentTimeMillis(long currentTimeMillisec){
+		
+		long time = System.currentTimeMillis();
+		long elapsed_time = time - currentTimeMillisec;
+		elapsed_time = currentTimeMillisec/1000;
+		
+		long min = elapsed_time/60;
+		int hour = Math.round(min/60);
+		
+		int min_int = Math.round(min-(hour*60)); 
+		
+		return min_int;
+	}
+	
+	/**
+	 * return mins from currentTimeMillisec
+	 * @param currentTimeMillisec
+	 * @return int
+	 */
+	public static int get_sec_from_currentTimeMillis(long currentTimeMillisec){
+		
+		long time = System.currentTimeMillis();
+		long elapsed_time = time - currentTimeMillisec;
+		elapsed_time = currentTimeMillisec/1000;
+		
+		long min = elapsed_time/60;
+		int hour = Math.round(min/60);
+		
+		int min_int = Math.round(min-(hour*60)); 
+		
+		int sec = Math.round(elapsed_time - (hour*60*60) - (min_int*60));
+		
+		return sec;
+	}
 
-}
+} // end of Time class
