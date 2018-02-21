@@ -270,8 +270,6 @@ public class Time {
 		
 		long time = System.currentTimeMillis();
 		long elapsed_time = time - currentTimeMillisec;
-		
-		
 		elapsed_time = elapsed_time/1000;
 		
 		long min = elapsed_time/60;
