@@ -256,7 +256,7 @@ public class Time {
 		
 		long time = System.currentTimeMillis();
 		long elapsed_time = time - currentTimeMillisec;
-		elapsed_time = currentTimeMillisec/1000;
+		elapsed_time = elapsed_time/1000;
 		
 		return elapsed_time;
 	}
@@ -270,7 +270,9 @@ public class Time {
 		
 		long time = System.currentTimeMillis();
 		long elapsed_time = time - currentTimeMillisec;
-		elapsed_time = currentTimeMillisec/1000;
+		
+		
+		elapsed_time = elapsed_time/1000;
 		
 		long min = elapsed_time/60;
 		int hour = Math.round(min/60);
@@ -287,7 +289,7 @@ public class Time {
 		
 		long time = System.currentTimeMillis();
 		long elapsed_time = time - currentTimeMillisec;
-		elapsed_time = currentTimeMillisec/1000;
+		elapsed_time = elapsed_time/1000;
 		
 		long min = elapsed_time/60;
 		int hour = Math.round(min/60);
@@ -306,7 +308,8 @@ public class Time {
 		
 		long time = System.currentTimeMillis();
 		long elapsed_time = time - currentTimeMillisec;
-		elapsed_time = currentTimeMillisec/1000;
+		
+		elapsed_time = elapsed_time/1000;
 		
 		long min = elapsed_time/60;
 		int hour = Math.round(min/60);
