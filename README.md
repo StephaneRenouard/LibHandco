@@ -1,2 +1,3 @@
 # LibHandco
-Usefull Java tooling lib
+Usefull Java tooling lib, MIT licence.
+
