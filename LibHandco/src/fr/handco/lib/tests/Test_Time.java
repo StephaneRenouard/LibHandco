@@ -11,6 +11,7 @@ public class Test_Time {
 	public Test_Time() {
 		
 		System.out.println("starting");
+		
 		long start_time = System.currentTimeMillis();
 	
 		try {
